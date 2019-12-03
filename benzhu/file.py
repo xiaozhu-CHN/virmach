@@ -20,7 +20,7 @@ class JsonFile():
             return "0"
         str1 = "."
         number = str(date['price'])
-        if(number == ""):
+        if(number == 'None' or number ==''):
             return "0"
         else:
             number = number[1:number.index(" ")]
