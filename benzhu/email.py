@@ -3,9 +3,9 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-class benzhuEmail():
+class BenzhuEmail:
 
-    def send(item):
+    def send(self,item):
         # 发信方的信息：发信邮箱，QQ 邮箱授权码
         from_addr = '发件的邮件'
         password = '邮箱密码'

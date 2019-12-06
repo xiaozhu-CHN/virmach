@@ -8,16 +8,16 @@ pip install -r requirements.txt
 <h3>2.修改邮件配置</h3>
 位于benzhu\email.py文件 修改发信方的邮箱、发信方的密码或者授权码、收信方的邮箱、发信服务器、发信端口。
 
-<h3>3.启动</h3>
-启动位于根目录的time.py即可启动本程序。
-
-<h3>4.日志、文件</h3>
-记录的历史的价格位于benzhu/data/textLog.txt。
-日志文件位于根目录all.log。
-
-<h3>5.修改设定的价格</h3>
+<h3>3.修改设定的价格</h3>
 修改benzhu/spiders/itcast.py文件的44行数字15。
 <img src="https://ae01.alicdn.com/kf/U6deffc8db2374314b59bd4b424a2a5dbo.png"  alt="修改设定的价格" />
 
-<h4>6.邮件效果图</h4>
+<h3>4.启动</h3>
+启动位于根目录的time.py即可启动本程序。
+
+<h3>5.日志、文件</h3>
+记录的历史的价格位于benzhu/data/textLog.txt。
+日志文件位于根目录all.log。
+
+<h3>6.邮件效果图</h3>
 <img src="https://ae01.alicdn.com/kf/U3d36e354d76f45348db948f9e78af3e8h.png"  alt="邮件效果图" />

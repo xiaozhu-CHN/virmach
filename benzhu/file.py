@@ -2,7 +2,7 @@ import json
 import os
 import time
 
-class JsonFile():
+class JsonFile:
     path = os.path.split(os.path.realpath(__file__))[0]
 
     #保存本次读取到的数据
