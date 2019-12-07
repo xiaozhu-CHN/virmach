@@ -30,6 +30,28 @@ class Message:
         else:
             print("短信发送失败")
 
-if __name__ == '__main__':
-    message = Message()
-    message.sendMessage()
+    def sendServerFtqq(self, item):
+        # Server酱微信推送模板
+        #官网链接：http://sc.ftqq.com/?c=wechat&a=bind
+        desp = '服务器价格：' + item['price'] + '美元/年' + \
+               '\n\n\n架构：' + item['virt'] + \
+               '\n\n\n运行内存：' + item['ram'] + 'MB' + \
+               '\n\n\nncpu数量：' + item['cpu'] + \
+               '\n\n\n硬盘：' + item['hdd'] + 'G' + \
+               '\n\n\n流量：' + item['bw'] + 'G' + \
+               '\n\n\nIPV4数量：' + item['ips'] + \
+               '\n\n\n地区：' + item['addres'] + \
+               '\n\n\n[购买链接1](https://virmach.com/black-friday-cyber-monday/)'
+        payload = {'text': 'virmach优惠', 'desp': desp}
+        #把链接放入下面即可
+        response = requests.post("https://sc.ftqq.com/[SCKEY(登入后可见)].send", data=payload)
+        # 解析json数据
+        print(response.text)
+        if (response.text != 'None' or response.text != ''):
+            jsobj = json.loads(response.text)
+            if (jsobj['errmsg'] == 'success'):
+                print('微信推送成功')
+            else:
+                print('微信推送失败')
+        else:
+            print('微信推送反馈失败')

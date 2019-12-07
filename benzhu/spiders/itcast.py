@@ -55,3 +55,5 @@ class ItcastSpider(scrapy.Spider):
                     #等于这三个地区的话就发送短信
                     message = Message()
                     #message.sendMessage(newprice)
+                    #发送微信提醒
+                    #message.sendServerFtqq(item)
